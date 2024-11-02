@@ -18,7 +18,6 @@ public class CarServiceImp implements CarService {
 
     @Override
     public List<Car> getCars(Integer count) {
-        System.out.println("Service COUNT = " + count);
 
         return getCarDAO().getCars(count);
     }

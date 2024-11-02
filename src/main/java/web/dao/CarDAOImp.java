@@ -20,7 +20,6 @@ public class CarDAOImp implements CarDAO {
 
     @Override
     public List<Car> getCars(Integer count) {
-        System.out.println("DAO COUNT = " + count);
         if (count == null || count >= 5) {
             return carsList;
         } else {
