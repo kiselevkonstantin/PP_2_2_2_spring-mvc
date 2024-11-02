@@ -10,10 +10,16 @@ import java.util.List;
 @Component
 public class CarServiceImp implements CarService {
 
-    public CarDAO carDAO = new CarDAOImp();
+    private CarDAO carDAO;
+
+    public CarDAO getCarDAO() {
+        return carDAO = new CarDAOImp();
+    }
 
     @Override
-    public List<Car> getCars(int count) {
-        return carDAO.getCars(count);
+    public List<Car> getCars(Integer count) {
+        System.out.println("Service COUNT = " + count);
+
+        return getCarDAO().getCars(count);
     }
 }

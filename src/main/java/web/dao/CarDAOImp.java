@@ -19,7 +19,13 @@ public class CarDAOImp implements CarDAO {
             new Car("Tesla", 2019, 30000));
 
     @Override
-    public List<Car> getCars(int count) {
-        return count < 5 ? carsList.subList(0, count) : carsList;
+    public List<Car> getCars(Integer count) {
+        System.out.println("DAO COUNT = " + count);
+        if (count == null || count >= 5) {
+            return carsList;
+        } else {
+            return carsList.subList(0, count);
+        }
     }
 }
+

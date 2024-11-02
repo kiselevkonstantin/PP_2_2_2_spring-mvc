@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface CarDAO {
 
-    List<Car> getCars(int count);
+    List<Car> getCars(Integer count);
 }
